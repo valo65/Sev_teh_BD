@@ -1,0 +1,47 @@
+<!-- 
+  Файл: hr_export.dtd
+  Валидация на XML структура за HR система
+  Създадено за Задача 2
+-->
+
+<!ELEMENT hrExport (rows, control)>
+<!ATTLIST hrExport
+  table      CDATA #REQUIRED
+  exportedAt CDATA #REQUIRED
+>
+
+<!ELEMENT rows (row+)>
+
+<!ELEMENT row (
+  employee_id,
+  first_name,
+  last_name,
+  email,
+  phone_number,
+  hire_date,
+  job_id,
+  salary,
+  commission_pct,
+  manager_id,
+  department_id
+)>
+
+<!ELEMENT employee_id (#PCDATA)>
+<!ELEMENT first_name (#PCDATA)>
+<!ELEMENT last_name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT phone_number (#PCDATA)>
+<!ELEMENT hire_date (#PCDATA)>
+<!ELEMENT job_id (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT commission_pct (#PCDATA)>
+<!ELEMENT manager_id (#PCDATA)>
+<!ELEMENT department_id (#PCDATA)>
+
+<!ELEMENT control (rowCount, columnCount, minId, maxId, checksum)>
+
+<!ELEMENT rowCount (#PCDATA)>
+<!ELEMENT columnCount (#PCDATA)>
+<!ELEMENT minId (#PCDATA)>
+<!ELEMENT maxId (#PCDATA)>
+<!ELEMENT checksum (#PCDATA)>
